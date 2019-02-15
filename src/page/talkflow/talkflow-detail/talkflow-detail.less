@@ -1,0 +1,182 @@
+@import "../../../style/var.less";
+:global {
+  .el-select {
+    width: 100%;
+  }
+  .el-form-item__label {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .el-radio {
+    color: #606266;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: 0;
+    font-size: 16px;
+    width: 100%;
+    padding: 12px 0;
+  }
+  .el-radio__label {
+    font-size: 16px
+  }
+  .el-radio+.el-radio {
+    margin-left: 0;
+  }
+
+}
+.talkflow_detail {
+  position: relative;
+  height: 98%;
+  font-size: 16px;
+  font-weight: 300;
+}
+.publish_talkflow {
+  text-align: right;
+  padding: 15px 0;
+}
+.publish_button {
+  display: inline-block;
+  color: white;
+  width: 150px;
+  height: 40px;
+  background: #508cf7;
+  line-height: 40px;
+  text-align: center;
+  .bdr
+}
+.talkflow_control {
+  position: absolute;
+  top: 75px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0;
+}
+// 主体左边
+.talkflow_control_left {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 37%;
+  height: 100%;
+  padding: 15px;
+  position: relative;
+  vertical-align: top;
+  font-size: 16px;
+  background: @whi-bg;
+  .bdr
+}
+.button_mixin {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  .bdr;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.add_flow {
+  width: 130px;
+  .button_mixin;
+  color: @whi-let;
+  background: @blue;
+  height: 40px;
+  line-height: 40px;
+}
+.edit_flow, .delete_flow {
+  width: 108px;
+  .button_mixin;
+  border: 1px solid @blue;
+  color: @blue;
+}
+.button_before_mixin {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: sub;
+  margin-right: 8px;
+}
+.add_flow::before {
+  .button_before_mixin;
+  .bg-mixin("icon_xinzeng_nor.png",contain);
+}
+.edit_flow::before {
+  .button_before_mixin;
+  .bg-mixin("icon_bianji_on.png",contain);
+}
+.delete_flow::before {
+  .button_before_mixin;
+  .bg-mixin("icon_shanchu_on.png",contain);
+}
+
+.talkflow_list {
+  position: absolute;
+  top: 85px;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  overflow-y: scroll;
+}
+.player {
+  width: 95%;
+}
+
+
+// 主体右边
+.talkflow_control_right {
+  display: inline-block;
+  width: 62.8%;
+  height: 100%;
+  vertical-align: top;
+  font-size: 16px;
+  background: @whi-bg;
+  float: right;
+  .bdr;
+  font-size: 16px;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+.save_block {
+  overflow: hidden;
+  padding: 15px 0;
+}
+.save_button {
+  width: 85px;
+  .button_mixin;
+  color: @whi-let;
+  background: @blue;
+  float: right;
+  margin-right: 0;
+}
+.form {
+  margin-top: 15px;
+}
+.add_intention {
+  .button_mixin;
+  width: 150px;
+  color: @gray;
+  .bg-mixin('btn_luyin_on.png',140% 110%);
+  border:1px solid #dcdfe6;
+  font-weight: 400;
+}
+
+
+//svg
+.svg_add_intention {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 500px;
+}
+.svg_add_intention svg {
+  width: 1500px;
+  height: 100%;
+}
+
+//新增意图
+.textarea textarea{
+  height: 40px !important;
+  padding: 10px;
+}

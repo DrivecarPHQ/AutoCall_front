@@ -1,0 +1,36 @@
+@import '../../style/var.less';
+.header {
+  height: 55px;
+  line-height: 55px;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding-left: 240px;
+  font-size: 16px;
+  transition: linear 0.3s;
+}
+.header.collapse {
+  padding-left: 110px;
+}
+.userName {
+  float: right;
+  margin-right: 32px;
+}
+.userName::before {
+  content: '';
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  .bg-mixin('pic_touoxiang.png', cover);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.anchor {
+  color: #67a0ff;
+  cursor: pointer;
+}

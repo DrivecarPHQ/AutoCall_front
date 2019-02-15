@@ -1,0 +1,86 @@
+@import '../../style/var';
+:global {
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 200px;
+  }
+  .el-menu {
+    border-right: 0;
+  }
+  .el-icon-ai {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    .bg-mixin("icon_wiahu_nor.png", contain)
+  }
+  .el-icon-talk {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    .bg-mixin("icon_huashu_nor.png", contain)
+  }
+  .el-menu-item, .el-submenu__title {
+    height: 88px;
+    line-height: 88px;
+  }
+  .el-menu-item.is-active {
+    background-color: #1522a1 !important;
+  }
+  .el-menu-item {
+    position: relative;
+  }
+  .el-menu-item.is-active::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 56px;
+    background: #444fc0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .el-menu-item.is-active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style:dashed solid dashed dashed ;
+    border-color:transparent #eaecf1 transparent transparent;
+  }
+}
+
+.leftnav {
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  border-right: 1px solid #e6e6e6;
+  .bg-mixin("zhinengwaihu_bg.png", cover)
+}
+
+.nav_head {
+  text-align: right;
+  height: 62px;
+  // transition: linear 0.3s;
+  .bg-mixin("waihuwenzi.png", auto)
+}
+.nav_collapse {
+  position: absolute;
+  top: 19px;
+  right: -25px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  .bg-mixin('icon_shouqi_nor.png', cover);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.collapse {
+  .bg-mixin('icon1.png',auto);
+}

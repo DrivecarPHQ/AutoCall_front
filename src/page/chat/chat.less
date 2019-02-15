@@ -1,0 +1,214 @@
+@import "../../style/var.less";
+
+:global {
+  .aplayer {
+    margin: 0;
+    overflow: visible !important;
+    .aplayer-body .aplayer-info .aplayer-music {
+          margin-top: -10px;
+          font-size: 16px;
+    }
+    .aplayer-controller, .aplayer-controller .aplayer-time {
+          margin-bottom: 10px;
+    }
+    .aplayer-info {
+      overflow: visible !important;
+    }
+  }
+}
+
+.header-mixin {
+  content: '';
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: sub;
+  margin-bottom: -2px;
+  margin-right: 5px;
+}
+//对话板块
+.chat {
+  position: relative;
+  font-size: 16px;
+  color:#333333;
+  width: 100%;
+  height: 98%;
+}
+.chat_block {
+  position: absolute;
+  width: 73%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+  .customer_info {
+  height: 60px;
+  padding: 0 15px;
+  line-height: 60px;
+  background: @whi-bg;
+  margin-bottom: 5px;
+}
+.customer_info span {
+  margin-right: 17px;
+}
+.customer_detail {
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  font-size: 16px;
+  color: @whi-let;
+  .bg-mixin('btn_yonghuxiangqing_nor.png',100% 100%);
+  border-radius: 3px;
+  float: right;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.player {
+  box-sizing: border-box;
+  height: 108px;
+  // .bg-mixin('bg_2.png',cover);
+}
+
+
+
+// 通话结果
+.result_block {
+  height: 400px;
+  background: @whi-bg;
+  position: absolute;
+  left: 73.5%;
+  right: 0;
+  top: 0;
+}
+.result_block_header {
+  padding: 18px 15px;
+  border-bottom: 1px solid @border;
+}
+.result_block_header::before {
+  .header-mixin;
+  .bg-mixin('icon_tonghua_nor.png',contain);
+}
+.result_block_content {
+  padding: 15px;
+}
+.result_block_content p {
+  margin-bottom: 18px;
+}
+.holding_time {
+  margin-top: 55px;
+  padding: 25px 0;
+  border: 1px solid @border;
+  text-align: center;
+}
+.holding_time h3 {
+  color : #0078ff;
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0 0 14px 0;
+}
+
+// 用户意向
+.range_block {
+  background: @whi-bg;
+  position: absolute;
+  left: 73.5%;
+  right: 0;
+  top: 410px;
+  height: 430px;
+}
+.range_block_header {
+  padding: 18px 15px;
+  border-bottom: 1px solid @border;
+}
+.range_block_header::before {
+  .header-mixin;
+  .bg-mixin('icon_kehuyixiang_nor.png',contain);
+}
+.range_block_content {
+  padding: 45px 15px 30px 15px;
+  overflow:scroll;
+}
+.range_type_item {
+  padding: 17px 0;
+  border: 1px solid @border;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+
+//对话内容板块
+.chat_content {
+  padding: 0 15px 15px 15px;
+  position: absolute;
+  top: 137px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  background: @whi-bg;
+}
+.chat_content li {
+  margin-top: 20px;
+}
+.man {
+  text-align: right;
+}
+.talker_name {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 45px;
+  border: 1px solid @border;
+}
+.man .talker_name {
+  float: right;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.talker_msg {
+  display: inline-block;
+  padding: 15px 10px;
+  margin: 0 10px;
+  width: 340px;
+  border-radius: 8px;
+  background: #f6f6f6;
+  text-align: center;
+  position: relative;
+  line-height: 1.2;
+}
+.man .talker_msg {
+  background: #acd4f3;
+}
+.talker_msg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-width:10px;
+  border-style:dashed solid dashed dashed ;
+  border-color:transparent #f6f6f6 transparent transparent;
+}
+.man .talker_msg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -20px;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-width:10px;
+  border-style: dashed dashed dashed solid;
+  border-color: transparent transparent transparent #acd4f3;
+}
